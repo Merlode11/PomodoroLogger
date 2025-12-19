@@ -26,6 +26,12 @@
 
 > **Invest your time easily**
 
+## Custom Additions in This Fork
+- Light/dark toggle with Gruvbox Material palette applied across timer, Kanban, history charts, and dialogs (choice persists).
+- Themed visualization polish (calendar, dual pie, sankey, word cloud, badges, dropdowns) for both themes.
+- UI refinements in Settings, Kanban table view, and badges for better contrast; splash and scrollbars follow theme surfaces.
+- Timer stability in development builds (no accelerated countdowns).
+
 [中文README](https://github.com/zxch3n/PomodoroLogger/wiki/中文README)
 
 
