@@ -32,6 +32,13 @@
 - UI refinements in Settings, Kanban table view, and badges for better contrast; splash and scrollbars follow theme surfaces.
 - Timer stability in development builds (no accelerated countdowns).
 
+## Gruvbox Dark Theme Preview
+Enjoy the new Gruvbox Material dark styling across the timer, Kanban, and history views. Example captures:
+
+![Dark Timer](./screenshots/dark-theme-1.png)
+![Dark Kanban](./screenshots/dark-theme-2.png)
+![Dark History](./screenshots/dark-theme-3.png)
+
 [中文README](https://github.com/zxch3n/PomodoroLogger/wiki/中文README)
 
 
