@@ -86,7 +86,7 @@ function getScreenCallback(
                 types: ['screen'],
                 thumbnailSize: { width: 1, height: 1 },
             })
-            .then((sources) => {
+            .then((sources: Electron.DesktopCapturerSource[]) => {
                 const selectSource = sources.filter(
                     (source: any) => source.display_id + '' === curScreen.id + ''
                 )[0];

@@ -1,8 +1,7 @@
 const webpack = require('webpack');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
-const HappyPack = require('happypack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const { build } = require('./package');
@@ -53,7 +52,7 @@ const fixNedbForElectronRenderer = {
 };
 
 
-module.exports = merge.smart(baseConfig, {
+module.exports = merge(baseConfig, {
     target: 'electron-renderer',
     entry: {
         app: ['./src/renderer/app.tsx']
@@ -66,15 +65,39 @@ module.exports = merge.smart(baseConfig, {
             {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
-                use: 'happypack/loader',
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        cacheDirectory: true,
+                        babelrc: false,
+                        presets: [
+                            [
+                                '@babel/preset-env',
+                                {
+                                    targets: { browsers: 'last 2 versions ' },
+                                    modules: false
+                                }
+                            ],
+                            '@babel/preset-typescript',
+                            '@babel/preset-react'
+                        ],
+                        plugins: [
+                            '@babel/plugin-transform-runtime',
+                            [
+                                '@babel/plugin-proposal-class-properties',
+                                { loose: true }
+                            ]
+                        ]
+                    }
+                },
             },
             {
                 test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.css$/,
-                loaders: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
@@ -119,43 +142,22 @@ module.exports = merge.smart(baseConfig, {
         ]
     },
     plugins: [
-        new HappyPack({
-            loaders: [
-                {
-                    loader: 'babel-loader',
-                    options: {
-                        cacheDirectory: true,
-                        babelrc: false,
-                        presets: [
-                            [
-                                '@babel/preset-env',
-                                {
-                                    targets: { browsers: 'last 2 versions ' },
-                                    modules: false
-                                }
-                            ],
-                            '@babel/preset-typescript',
-                            '@babel/preset-react'
-                        ],
-                        plugins: [
-                            '@babel/plugin-transform-runtime',
-                            [
-                                '@babel/plugin-proposal-class-properties',
-                                { loose: true }
-                            ]
-                        ]
-
+        new ForkTsCheckerWebpackPlugin({
+            typescript: {
+                configFile: path.resolve(__dirname, 'tsconfig.json'),
+            }
+        }),
+        new CopyPlugin({
+            patterns: [
+                { 
+                    from: path.resolve(__dirname, 'public'), 
+                    to: path.resolve(__dirname, 'dist'),
+                    globOptions: {
+                        ignore: ['**/index.html']
                     }
-                }
+                },
             ]
         }),
-        new ForkTsCheckerWebpackPlugin({
-            reportFiles: ['src/renderer/**/*']
-        }),
-        new CopyPlugin([
-            { from: path.resolve(__dirname, 'public'), to: path.resolve(__dirname, 'dist') },
-        ]),
-        new webpack.NamedModulesPlugin(),
         new HtmlWebpackPlugin({
             title: build.productName,
             template: 'public/index.html',

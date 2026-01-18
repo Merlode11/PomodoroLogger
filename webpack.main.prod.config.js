@@ -1,5 +1,5 @@
-const merge = require('webpack-merge');
-const Visualizer = require('webpack-visualizer-plugin');
+const { merge } = require('webpack-merge');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const webpack = require('webpack');
 const baseConfig = require('./webpack.main.config');
 const fs = require('fs');
@@ -11,14 +11,16 @@ if (!fs.existsSync('./webpack-visualization')) {
 // disable source-map in production build
 baseConfig.devtool = undefined;
 baseConfig.watch = false;
-module.exports = merge.smart(baseConfig, {
+module.exports = merge(baseConfig, {
     mode: 'production',
     plugins: [
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
         }),
-        new Visualizer({
-            filename: "./webpack-visualization/main.html"
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+            reportFilename: '../webpack-visualization/main.html',
+            openAnalyzer: false,
         })
     ],
 });

@@ -2,7 +2,7 @@ import { workers } from '../workers';
 import { PomodoroRecord } from './type';
 import { dbBaseDir } from '../../config';
 import * as fs from 'fs';
-import nedb from 'nedb';
+import nedb from '@seald-io/nedb';
 
 const dbWorkers = workers.dbWorkers;
 export function renameIllegalName(record: PomodoroRecord) {

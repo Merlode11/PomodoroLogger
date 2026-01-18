@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import nedb from 'nedb';
+import nedb from '@seald-io/nedb';
 import { dbPaths } from '../config';
 
 const { projectDB, sessionDB, settingDB, kanbanDB, cardsDB, listsDB, moveDB } = dbPaths;

@@ -1,4 +1,4 @@
-import nedb from 'nedb';
+import nedb from '@seald-io/nedb';
 import { addWorkerListeners, DoneType } from './util';
 const ctx: Worker = self as any;
 const dbs: { [name: string]: nedb } = {};

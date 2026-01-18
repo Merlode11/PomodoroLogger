@@ -1,4 +1,4 @@
-import nedb from 'nedb';
+import nedb from '@seald-io/nedb';
 import type { SourceData } from '../../shared/dataMerger/dataMerger';
 import { DBs, loadDBs } from '../db';
 import { AsyncDB } from '../../utils/dbHelper';

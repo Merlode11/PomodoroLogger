@@ -5,7 +5,6 @@ import { actions as boardActions } from '../Kanban/Board/action';
 import { actions as kanbanActions } from '../Kanban/action';
 import { actions as historyActions } from '../History/action';
 import { throttle } from 'lodash';
-import { promisify } from 'util';
 import dbs from '../../dbs';
 import { PomodoroRecord } from '../../monitor/type';
 import { workers } from '../../workers';
@@ -196,9 +195,7 @@ export const actions = {
     switchFocusRestMode,
     switchTab: throttle((direction: 1 | -1) => switchTab(direction), 100),
     fetchSettings: () => async (dispatch: Dispatch) => {
-        const settings: Partial<Setting> = await promisify(
-            dbs.settingDB.findOne.bind(dbs.settingDB)
-        )({ name: 'setting' });
+        const settings: Partial<Setting> = await dbs.settingDB.findOneAsync({ name: 'setting' });
         if (settings == null) {
             return;
         }

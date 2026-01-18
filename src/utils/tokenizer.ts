@@ -19,8 +19,8 @@ export class Tokenizer {
                 let found = false;
                 for (const [_, reg] of this.rules) {
                     const match = str.match(reg);
-                    if (match != null) {
-                        const matched = match.entries().next().value[1];
+                    if (match != null && match[0]) {
+                        const matched = match[0];
                         ans.push(matched);
                         str = str.slice(matched.length);
                         found = true;

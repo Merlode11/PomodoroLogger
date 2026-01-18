@@ -3,7 +3,7 @@ import { PomodoroRecord } from '../monitor/type';
 import { KNN } from '../../main/learner/appKnn';
 import { sample } from '../../utils/random';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
-import nedb from 'nedb';
+import nedb from '@seald-io/nedb';
 
 const ctx: Worker = self as any;
 

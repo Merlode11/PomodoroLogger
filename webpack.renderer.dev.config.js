@@ -1,9 +1,9 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const spawn = require('child_process').spawn;
 
 const baseConfig = require('./webpack.renderer.config');
 
-module.exports = merge.smart(baseConfig, {
+module.exports = merge(baseConfig, {
     resolve: {
         alias: {
             'react-dom': '@hot-loader/react-dom'
@@ -13,16 +13,13 @@ module.exports = merge.smart(baseConfig, {
     devServer: {
         port: 2003,
         compress: false,
-        noInfo: false,
-        stats: 'errors-only',
-        inline: true,
         hot: true,
         headers: { 'Access-Control-Allow-Origin': '*' },
         historyApiFallback: {
             verbose: true,
             disableDotRule: false
         },
-        before() {
+        onBeforeSetupMiddleware() {
             if (process.env.START_HOT) {
                 spawn('npm', ['run', 'start-main-dev'], {
                     shell: true,

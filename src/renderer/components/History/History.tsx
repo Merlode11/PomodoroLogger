@@ -278,7 +278,7 @@ export const History: React.FunctionComponent<Props> = React.memo((props: Props)
                                 weights={aggInfo.wordWeights}
                                 width={calendarWidth}
                                 height={calendarWidth * 0.6}
-                                themeName={props.themeName}
+                                themeName={props.themeName as any}
                             />
                         </ChartContainer>
                     ) : undefined
