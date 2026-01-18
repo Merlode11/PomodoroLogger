@@ -209,14 +209,15 @@ describe('listReducer', () => {
         // expect(state).toStrictEqual(oldState);
     });
 
-    it('should update', async (done) => {
+    it('should update', async () => {
         let state: ListsState = {};
+        let resolved = false;
 
         // @ts-ignore
         const dispatch: Dispatch = (action: any) => {
             if (action.type.startsWith('[Card]')) {
                 if (action.payload.title === 'newcardid') {
-                    done();
+                    resolved = true;
                     return;
                 }
             }
@@ -234,5 +235,6 @@ describe('listReducer', () => {
         await actions.renameList(_id0, 'id011')(dispatch);
         expect(state[_id0].title).toBe('id011');
         await actions.addCard(_id0, 'newcardid')(dispatch);
+        expect(resolved).toBe(true);
     });
 });

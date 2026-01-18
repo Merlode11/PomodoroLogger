@@ -93,9 +93,12 @@ const createWindow = async () => {
     };
 
     win.webContents.on('will-navigate', handleRedirect);
-    win.webContents.on('new-window', handleRedirect);
+    win.webContents.setWindowOpenHandler(({ url }) => {
+        require('electron').shell.openExternal(url);
+        return { action: 'deny' };
+    });
 
-    win.on('close', (event: Event) => {
+    win.on('close', (event) => {
         if (win) {
             win.hide();
             event.preventDefault();

@@ -12,9 +12,11 @@ const handlers: { [T in WorkerMessageType]: (msg: WorkerMessage<T>) => void } = 
     },
 };
 
-process.on('message', async <T extends WorkerMessageType>(msg: WorkerMessage<T>) => {
-    const callback = handlers[msg.type];
-    callback && callback(msg as any);
+// @ts-ignore - Node.js process types don't match child_process types correctly
+process.on('message', async (msg: any) => {
+    const typedMsg = msg as WorkerMessage<WorkerMessageType>;
+    const callback = handlers[typedMsg.type];
+    callback && callback(typedMsg as any);
 });
 
 function send(msg: WorkerResponse) {

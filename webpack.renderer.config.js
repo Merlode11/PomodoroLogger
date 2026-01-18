@@ -149,7 +149,13 @@ module.exports = merge(baseConfig, {
         }),
         new CopyPlugin({
             patterns: [
-                { from: path.resolve(__dirname, 'public'), to: path.resolve(__dirname, 'dist') },
+                { 
+                    from: path.resolve(__dirname, 'public'), 
+                    to: path.resolve(__dirname, 'dist'),
+                    globOptions: {
+                        ignore: ['**/index.html']
+                    }
+                },
             ]
         }),
         new HtmlWebpackPlugin({
