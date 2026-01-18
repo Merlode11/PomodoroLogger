@@ -1,5 +1,5 @@
 const { merge } = require('webpack-merge');
-const Visualizer = require('webpack-visualizer-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const webpack = require('webpack');
 const baseConfig = require('./webpack.main.config');
 const fs = require('fs');
@@ -17,8 +17,10 @@ module.exports = merge(baseConfig, {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
         }),
-        new Visualizer({
-            filename: "./webpack-visualization/main.html"
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+            reportFilename: '../webpack-visualization/main.html',
+            openAnalyzer: false,
         })
     ],
 });
