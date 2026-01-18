@@ -1,6 +1,14 @@
 const common = {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
     "transform": {
-        "^.+\\.tsx?$": "ts-jest"
+        "^.+\\.tsx?$": ["ts-jest", {
+            diagnostics: false,
+            tsconfig: {
+                esModuleInterop: true,
+                allowSyntheticDefaultImports: true
+            }
+        }]
     },
     "moduleFileExtensions": [
         "ts",
@@ -21,11 +29,6 @@ module.exports = {
     collectCoverage: true,
     testMatch: ['**/*.(spec|test).[jt]s?(x)'],
     transformIgnorePatterns: [ ],
-    globals: {
-        'ts-jest': {
-            diagnostics: false
-        }
-    },
     "roots": [
         "<rootDir>",
     ],

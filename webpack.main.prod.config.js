@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const Visualizer = require('webpack-visualizer-plugin');
 const webpack = require('webpack');
 const baseConfig = require('./webpack.main.config');
@@ -11,7 +11,7 @@ if (!fs.existsSync('./webpack-visualization')) {
 // disable source-map in production build
 baseConfig.devtool = undefined;
 baseConfig.watch = false;
-module.exports = merge.smart(baseConfig, {
+module.exports = merge(baseConfig, {
     mode: 'production',
     plugins: [
         new webpack.DefinePlugin({
