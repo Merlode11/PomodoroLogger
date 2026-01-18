@@ -1,6 +1,6 @@
 import { BaseWorker } from './BaseWorker';
 import Worker from 'worker-loader!./db.worker';
-import nedb from 'nedb';
+import nedb from '@seald-io/nedb';
 import { dbs } from '../dbs';
 import { dbPaths } from '../../config';
 
