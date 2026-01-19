@@ -1,0 +1,862 @@
+yarn run v1.22.22
+$ rm -rf ./dist
+$ concurrently "npm:build-main" "npm:build-renderer"
+[build-renderer] npm warn Unknown env config "argv". This will stop working in the next major version of npm.
+[build-renderer] npm warn Unknown env config "version-git-tag". This will stop working in the next major version of npm.
+[build-renderer] npm warn Unknown env config "version-commit-hooks". This will stop working in the next major version of npm.
+[build-renderer] npm warn Unknown env config "version-tag-prefix". This will stop working in the next major version of npm.
+[build-renderer] npm warn Unknown env config "version-git-message". This will stop working in the next major version of npm.
+[build-main] npm warn Unknown env config "argv". This will stop working in the next major version of npm.
+[build-main] npm warn Unknown env config "version-git-tag". This will stop working in the next major version of npm.
+[build-main] npm warn Unknown env config "version-commit-hooks". This will stop working in the next major version of npm.
+[build-main] npm warn Unknown env config "version-tag-prefix". This will stop working in the next major version of npm.
+[build-main] npm warn Unknown env config "version-git-message". This will stop working in the next major version of npm.
+[build-renderer] 
+[build-renderer] > pomodoro-logger@0.6.3 build-renderer
+[build-renderer] > cross-env NODE_ENV=production webpack --config webpack.renderer.prod.config.js
+[build-renderer] 
+[build-main] 
+[build-main] > pomodoro-logger@0.6.3 build-main
+[build-main] > cross-env NODE_ENV=production webpack --config webpack.main.prod.config.js
+[build-main] 
+[build-renderer] (node:262222) [DEP_WEBPACK_COMPILATION_CACHE] DeprecationWarning: Compilation.cache was removed in favor of Compilation.getCache()
+[build-renderer] (Use `node --trace-deprecation ...` to show where the warning was created)
+[build-renderer] (node:262222) [DEP_WEBPACK_TEMPLATE_PATH_PLUGIN_REPLACE_PATH_VARIABLES_HASH] DeprecationWarning: [hash] is now [fullhash] (also consider using [chunkhash] or [contenthash], see documentation for details)
+[build-renderer] (node:262222) [DEP_WEBPACK_DEPRECATION_ARRAY_TO_SET_INDEXER] DeprecationWarning: chunk.files was changed from Array to Set (indexing Array is deprecated)
+[build-main] Error parsing bundle asset "/mnt/files/Documents/GitHub/PomodoroLogger/dist/main.js": no such file
+[build-main] Error parsing bundle asset "/mnt/files/Documents/GitHub/PomodoroLogger/dist/worker.js": no such file
+[build-main] Error parsing bundle asset "/mnt/files/Documents/GitHub/PomodoroLogger/dist/preload.js": no such file
+[build-main] 
+[build-main] No bundles were parsed. Analyzer will show only original module sizes from stats file.
+[build-main] 
+[build-main] Webpack Bundle Analyzer saved report to /mnt/files/Documents/GitHub/PomodoroLogger/webpack-visualization/main.html
+[build-main] assets by status 436 KiB [cached] 4 assets
+[build-main] runtime modules 943 bytes 6 modules
+[build-main] modules by path ./node_modules/ 1.29 MiB 193 modules
+[build-main] modules by path ./src/ 40.7 KiB
+[build-main]   modules by path ./src/main/ 28.3 KiB 13 modules
+[build-main]   ./src/res/icon_sm.png 80 bytes [built] [code generated]
+[build-main]   ./src/shared/dataMerger/dataMerger.ts 8.52 KiB [built] [code generated]
+[build-main]   ./src/utils/dbHelper.ts 866 bytes [built] [code generated]
+[build-main]   ./src/config.ts 2.96 KiB [built] [code generated]
+[build-main] + 20 modules
+[build-main] 
+[build-main] ERROR in ./src/components/common/Mini/MiniLogger.tsx:247:17
+[build-main] TS2769: No overload matches this call.
+[build-main]   Overload 1 of 2, '(props: { slot?: string | undefined; style?: CSSProperties | undefined; title?: string | undefined; ref?: Ref<HTMLDivElement> | undefined; children?: ReactNode; ... 274 more ...; onTransitionStartCapture?: TransitionEventHandler<...> | undefined; } & { ...; } & { ...; }): ReactElement<...>', gave the following error.
+[build-main]     Type 'React.ReactNode' is not assignable to type 'import("/mnt/files/Documents/GitHub/PomodoroLogger/node_modules/@types/styled-components/node_modules/@types/react/index").ReactNode'.
+[build-main]       Type '{}' is not assignable to type 'ReactNode'.
+[build-main]   Overload 2 of 2, '(props: StyledComponentPropsWithAs<"div", DefaultTheme, {}, never, "div", "div">): ReactElement<StyledComponentPropsWithAs<"div", DefaultTheme, {}, never, "div", "div">, string | JSXElementConstructor<...>>', gave the following error.
+[build-main]     Type 'React.ReactNode' is not assignable to type 'import("/mnt/files/Documents/GitHub/PomodoroLogger/node_modules/@types/styled-components/node_modules/@types/react/index").ReactNode'.
+[build-main]       Type '{}' is not assignable to type 'ReactNode'.
+[build-main]     245 |                     </text>
+[build-main]     246 |                 </svg>
+[build-main]   > 247 |                 {this.getButtonRow()}
+[build-main]         |                 ^^^^^^^^^^^^^^^^^^^^^
+[build-main]     248 |                 <div className="task" style={{ margin: 4 }} title={this.props.task}>
+[build-main]     249 |                     {this.props.task}
+[build-main]     250 |                 </div>
+[build-main] 
+[build-main] ERROR in ./src/components/Visualization/AdaptWidthContainer/AdaptWidthContainer.tsx:35:13
+[build-main] TS2769: No overload matches this call.
+[build-main]   Overload 1 of 2, '(props: { slot?: string | undefined; style?: CSSProperties | undefined; title?: string | undefined; ref?: Ref<HTMLDivElement> | undefined; strictInside?: boolean | undefined; ... 275 more ...; onTransitionStartCapture?: TransitionEventHandler<...> | undefined; } & { ...; } & { ...; }): ReactElement<...>', gave the following error.
+[build-main]     Type 'React.ReactNode' is not assignable to type 'import("/mnt/files/Documents/GitHub/PomodoroLogger/node_modules/@types/styled-components/node_modules/@types/react/index").ReactNode'.
+[build-main]       Type '{}' is not assignable to type 'ReactNode'.
+[build-main]   Overload 2 of 2, '(props: StyledComponentPropsWithAs<"div", DefaultTheme, StyleProps, never, "div", "div">): ReactElement<StyledComponentPropsWithAs<"div", DefaultTheme, StyleProps, never, "div", "div">, string | JSXElementConstructor<...>>', gave the following error.
+[build-main]     Type 'React.ReactNode' is not assignable to type 'import("/mnt/files/Documents/GitHub/PomodoroLogger/node_modules/@types/styled-components/node_modules/@types/react/index").ReactNode'.
+[build-main]       Type '{}' is not assignable to type 'ReactNode'.
+[build-main]     33 |     return (
+[build-main]     34 |         <Container ref={selfRef} {...style}>
+[build-main]   > 35 |             {children && children(w)}
+[build-main]        |             ^^^^^^^^^^^^^^^^^^^^^^^^^
+[build-main]     36 |         </Container>
+[build-main]     37 |     );
+[build-main]     38 | };
+[build-main] 
+[build-main] ERROR in ./src/renderer/app.tsx:48:14
+[build-main] TS2786: 'Provider' cannot be used as a JSX component.
+[build-main]   Its instance type 'Provider<AnyAction>' is not a valid JSX element.
+[build-main]     Property 'refs' is missing in type 'Provider<AnyAction>' but required in type 'ElementClass'.
+[build-main]     46 |     ReactDOM.render(
+[build-main]     47 |         <AppContainer>
+[build-main]   > 48 |             <Provider store={store}>
+[build-main]        |              ^^^^^^^^
+[build-main]     49 |                 <Component />
+[build-main]     50 |             </Provider>
+[build-main]     51 |         </AppContainer>,
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Analyser/Analyser.tsx:25:14
+[build-main] TS2786: 'SearchBar' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     23 |     return (
+[build-main]     24 |         <Container>
+[build-main]   > 25 |             <SearchBar />
+[build-main]        |              ^^^^^^^^^
+[build-main]     26 |         </Container>
+[build-main]     27 |     );
+[build-main]     28 | });
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Application.tsx:62:23
+[build-main] TS2786: 'Timer' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     60 |
+[build-main]     61 | class Application extends React.Component<Props> {
+[build-main]   > 62 |     private timer = (<Timer />);
+[build-main]        |                       ^^^^^
+[build-main]     63 |     componentDidMount(): void {
+[build-main]     64 |         loadDBs().then(() => {
+[build-main]     65 |             this.props.fetchSettings();
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Application.tsx:117:14
+[build-main] TS2786: 'ThemeProvider' cannot be used as a JSX component.
+[build-main]   Its instance type 'Component<ThemeProviderProps<DefaultTheme, DefaultTheme>, any, any>' is not a valid JSX element.
+[build-main]     Property 'refs' is missing in type 'Component<ThemeProviderProps<DefaultTheme, DefaultTheme>, any, any>' but required in type 'ElementClass'.
+[build-main]     115 |         const { currentTab, changeAppTab, minimize, theme } = this.props;
+[build-main]     116 |         return (
+[build-main]   > 117 |             <ThemeProvider theme={themes[theme] || themes.light}>
+[build-main]         |              ^^^^^^^^^^^^^
+[build-main]     118 |                 <>
+[build-main]     119 |                     <GlobalStyle />
+[build-main]     120 |                     <Main minimize={minimize}>
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Application.tsx:119:22
+[build-main] TS2786: 'GlobalStyle' cannot be used as a JSX component.
+[build-main]   Its instance type 'Component<ThemedGlobalStyledClassProps<any, DefaultTheme>, any, any>' is not a valid JSX element.
+[build-main]     Property 'refs' is missing in type 'Component<ThemedGlobalStyledClassProps<any, DefaultTheme>, any, any>' but required in type 'ElementClass'.
+[build-main]     117 |             <ThemeProvider theme={themes[theme] || themes.light}>
+[build-main]     118 |                 <>
+[build-main]   > 119 |                     <GlobalStyle />
+[build-main]         |                      ^^^^^^^^^^^
+[build-main]     120 |                     <Main minimize={minimize}>
+[build-main]     121 |                         <Tabs
+[build-main]     122 |                             activeKey={minimize ? 'timer' : currentTab}
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Application.tsx:152:38
+[build-main] TS2786: 'Kanban' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     150 |                                     timeout={600000}
+[build-main]     151 |                                 >
+[build-main]   > 152 |                                     <Kanban />
+[build-main]         |                                      ^^^^^^
+[build-main]     153 |                                 </DestroyOnTimeoutWrapper>
+[build-main]     154 |                             </TabPane>
+[build-main]     155 |
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Application.tsx:170:38
+[build-main] TS2786: 'History' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     168 |                                     timeout={600000}
+[build-main]     169 |                                 >
+[build-main]   > 170 |                                     <History key={`history-${theme}`} />
+[build-main]         |                                      ^^^^^^^
+[build-main]     171 |                                 </DestroyOnTimeoutWrapper>
+[build-main]     172 |                             </TabPane>
+[build-main]     173 |
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Application.tsx:183:34
+[build-main] TS2786: 'Setting' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     181 |                                 key="setting"
+[build-main]     182 |                             >
+[build-main]   > 183 |                                 <Setting />
+[build-main]         |                                  ^^^^^^^
+[build-main]     184 |                             </TabPane>
+[build-main]     185 |                         </Tabs>
+[build-main]     186 |                         {!minimize && (
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Application.tsx:188:34
+[build-main] TS2786: 'UserGuide' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     186 |                         {!minimize && (
+[build-main]     187 |                             <>
+[build-main]   > 188 |                                 <UserGuide />
+[build-main]         |                                  ^^^^^^^^^
+[build-main]     189 |                                 <UpdateController />
+[build-main]     190 |                                 <CardInDetail />
+[build-main]     191 |                                 <ConnectedPomodoroSankey />
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Application.tsx:190:34
+[build-main] TS2322: Type '{}' is not assignable to type 'never'.
+[build-main]     188 |                                 <UserGuide />
+[build-main]     189 |                                 <UpdateController />
+[build-main]   > 190 |                                 <CardInDetail />
+[build-main]         |                                  ^^^^^^^^^^^^
+[build-main]     191 |                                 <ConnectedPomodoroSankey />
+[build-main]     192 |                             </>
+[build-main]     193 |                         )}
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Application.tsx:190:34
+[build-main] TS2786: 'CardInDetail' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     188 |                                 <UserGuide />
+[build-main]     189 |                                 <UpdateController />
+[build-main]   > 190 |                                 <CardInDetail />
+[build-main]         |                                  ^^^^^^^^^^^^
+[build-main]     191 |                                 <ConnectedPomodoroSankey />
+[build-main]     192 |                             </>
+[build-main]     193 |                         )}
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Application.tsx:191:34
+[build-main] TS2786: 'ConnectedPomodoroSankey' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     189 |                                 <UpdateController />
+[build-main]     190 |                                 <CardInDetail />
+[build-main]   > 191 |                                 <ConnectedPomodoroSankey />
+[build-main]         |                                  ^^^^^^^^^^^^^^^^^^^^^^^
+[build-main]     192 |                             </>
+[build-main]     193 |                         )}
+[build-main]     194 |                         <ReactHotkeys
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Kanban/Board/Board.tsx:82:22
+[build-main] TS2786: 'List' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     80 |             lists = (provided: any) => (
+[build-main]     81 |                 <ListContainer ref={provided.innerRef} {...provided.droppableProps}>
+[build-main]   > 82 |                     <List
+[build-main]        |                      ^^^^
+[build-main]     83 |                         listId={props.focusedList}
+[build-main]     84 |                         index={0}
+[build-main]     85 |                         key={0}
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Kanban/Board/Board.tsx:96:26
+[build-main] TS2786: 'List' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     94 |                 <ListContainer ref={provided.innerRef}>
+[build-main]     95 |                     {props.lists.map((listId, index) => (
+[build-main]   > 96 |                         <List
+[build-main]        |                          ^^^^
+[build-main]     97 |                             listId={listId}
+[build-main]     98 |                             index={index}
+[build-main]     99 |                             key={listId}
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Kanban/Board/Board.tsx:115:18
+[build-main] TS2786: 'DragDropContext' cannot be used as a JSX component.
+[build-main]   Its instance type 'DragDropContext' is not a valid JSX element.
+[build-main]     Property 'refs' is missing in type 'Component<DragDropContextProps, {}, any>' but required in type 'ElementClass'.
+[build-main]     113 |         return (
+[build-main]     114 |             <Container>
+[build-main]   > 115 |                 <DragDropContext onDragEnd={handleDragEnd}>
+[build-main]         |                  ^^^^^^^^^^^^^^^
+[build-main]     116 |                     <Droppable droppableId={props._id} type="COLUMN" direction="horizontal">
+[build-main]     117 |                         {lists}
+[build-main]     118 |                     </Droppable>
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Kanban/Board/Board.tsx:116:22
+[build-main] TS2786: 'Droppable' cannot be used as a JSX component.
+[build-main]   Its instance type 'Droppable' is not a valid JSX element.
+[build-main]     Property 'refs' is missing in type 'Component<DroppableProps, {}, any>' but required in type 'ElementClass'.
+[build-main]     114 |             <Container>
+[build-main]     115 |                 <DragDropContext onDragEnd={handleDragEnd}>
+[build-main]   > 116 |                     <Droppable droppableId={props._id} type="COLUMN" direction="horizontal">
+[build-main]         |                      ^^^^^^^^^
+[build-main]     117 |                         {lists}
+[build-main]     118 |                     </Droppable>
+[build-main]     119 |                 </DragDropContext>
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Kanban/Board/BoardBrief.tsx:250:18
+[build-main] TS2786: 'ListsCountBar' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     248 |                     />
+[build-main]     249 |                 ) : undefined}
+[build-main]   > 250 |                 <ListsCountBar boardId={props._id} height={40} />
+[build-main]         |                  ^^^^^^^^^^^^^
+[build-main]     251 |                 {props.relatedSessions.length ? (
+[build-main]     252 |                     <AnimTrend style={{ display: hover ? undefined : 'none' }}>
+[build-main]     253 |                         <IdTrend boardId={props._id} />
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Kanban/Board/Overview.tsx:313:22
+[build-main] TS2786: 'BoardBrief' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     311 |                     : undefined;
+[build-main]     312 |                 return (
+[build-main]   > 313 |                     <BoardBrief
+[build-main]         |                      ^^^^^^^^^^
+[build-main]     314 |                         key={_id}
+[build-main]     315 |                         boardId={_id}
+[build-main]     316 |                         onClick={onClick}
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Kanban/Board/Overview.tsx:326:18
+[build-main] TS2786: 'OverviewTable' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     324 |
+[build-main]     325 | export const Overview: FC<InputProps> = ({ showTable = false, showConfigById }: InputProps) =>
+[build-main]   > 326 |     showTable ? <OverviewTable /> : <OverviewCards showConfigById={showConfigById} />;
+[build-main]         |                  ^^^^^^^^^^^^^
+[build-main]     327 |
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Kanban/Board/Overview.tsx:326:38
+[build-main] TS2786: 'OverviewCards' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     324 |
+[build-main]     325 | export const Overview: FC<InputProps> = ({ showTable = false, showConfigById }: InputProps) =>
+[build-main]   > 326 |     showTable ? <OverviewTable /> : <OverviewCards showConfigById={showConfigById} />;
+[build-main]         |                                      ^^^^^^^^^^^^^
+[build-main]     327 |
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Kanban/Card/Card.tsx:153:14
+[build-main] TS2786: 'Draggable' cannot be used as a JSX component.
+[build-main]   Its instance type 'Draggable' is not a valid JSX element.
+[build-main]     Property 'refs' is missing in type 'Component<DraggableProps, {}, any>' but required in type 'ElementClass'.
+[build-main]     151 |     return (
+[build-main]     152 |         <>
+[build-main]   > 153 |             <Draggable draggableId={_id} index={index}>
+[build-main]         |              ^^^^^^^^^
+[build-main]     154 |                 {(provided, snapshot) => {
+[build-main]     155 |                     return (
+[build-main]     156 |                         <>
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Kanban/Card/CardEditor.tsx:256:3
+[build-main] TS2345: Argument of type 'ConnectedComponentClass<FC<Props>, Omit<FormComponentProps<any>, "form">>' is not assignable to parameter of type 'JSXElementConstructor<never>'.
+[build-main]   Type 'ConnectedComponentClass<FC<Props>, Omit<FormComponentProps<any>, "form">>' is not assignable to type 'new (props: never, context: any) => Component<any, any, any>'.
+[build-main]     Construct signature return types 'Component<Omit<FormComponentProps<any>, "form">, any, any>' and 'Component<any, any, any>' are incompatible.
+[build-main]       The types returned by 'render()' are incompatible between these types.
+[build-main]         Type 'React.ReactNode' is not assignable to type 'import("/mnt/files/Documents/GitHub/PomodoroLogger/node_modules/@types/styled-components/node_modules/@types/react/index").ReactNode'.
+[build-main]           Type '{}' is not assignable to type 'ReactNode'.
+[build-main]     254 |             dispatch(kanbanActions.setEditCard(false, '', undefined)),
+[build-main]     255 |     })
+[build-main]   > 256 | )(Form.create({})(_CardInDetail));
+[build-main]         |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[build-main]     257 |
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Kanban/Kanban.tsx:330:26
+[build-main] TS2786: 'Board' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     328 |                         <Overview showConfigById={showConfigById} showTable={showTable} />
+[build-main]     329 |                     ) : (
+[build-main]   > 330 |                         <Board
+[build-main]         |                          ^^^^^
+[build-main]     331 |                             boardId={props.kanban.chosenBoardId}
+[build-main]     332 |                             key={props.kanban.chosenBoardId}
+[build-main]     333 |                         />
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Kanban/List/List.tsx:296:10
+[build-main] TS2786: 'Draggable' cannot be used as a JSX component.
+[build-main]   Its instance type 'Draggable' is not a valid JSX element.
+[build-main]     Property 'refs' is missing in type 'Component<DraggableProps, {}, any>' but required in type 'ElementClass'.
+[build-main]     294 |
+[build-main]     295 |     return (
+[build-main]   > 296 |         <Draggable draggableId={props.listId} index={props.index}>
+[build-main]         |          ^^^^^^^^^
+[build-main]     297 |             {(provided, { draggingOver }) => (
+[build-main]     298 |                 <div>
+[build-main]     299 |                     <Container
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Kanban/List/List.tsx:357:26
+[build-main] TS2786: 'Droppable' cannot be used as a JSX component.
+[build-main]   Its instance type 'Droppable' is not a valid JSX element.
+[build-main]     Property 'refs' is missing in type 'Component<DroppableProps, {}, any>' but required in type 'ElementClass'.
+[build-main]     355 |                             )}
+[build-main]     356 |                         </ListHead>
+[build-main]   > 357 |                         <Droppable droppableId={props._id}>
+[build-main]         |                          ^^^^^^^^^
+[build-main]     358 |                             {(provided, { isDraggingOver }) => {
+[build-main]     359 |                                 const mergedRef = mergeRefs([
+[build-main]     360 |                                     provided.innerRef,
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Kanban/List/List.tsx:371:46
+[build-main] TS2786: 'Card' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     369 |                                         <BeforePlaceHolder />
+[build-main]     370 |                                         {filteredCards.map((cardId, index) => (
+[build-main]   > 371 |                                             <Card
+[build-main]         |                                              ^^^^
+[build-main]     372 |                                                 boardId={props.boardId}
+[build-main]     373 |                                                 cardId={cardId}
+[build-main]     374 |                                                 index={index}
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Timer/Timer.tsx:740:18
+[build-main] TS2786: 'TimerMask' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     738 |             <Layout style={{ backgroundColor: 'var(--pl-bg)' }} ref={this.selfRef}>
+[build-main]     739 |                 <ReactHotkeys keyName={'f5,f6,tab'} onKeyDown={this.onKeyDown} />
+[build-main]   > 740 |                 <TimerMask
+[build-main]         |                  ^^^^^^^^^
+[build-main]     741 |                     extendCurrentSession={this.extendCurrentSession}
+[build-main]     742 |                     newPomodoro={this.stagedSession}
+[build-main]     743 |                     showMask={showMask}
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Timer/Timer.tsx:757:26
+[build-main] TS2786: 'Board' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     755 |                             {this.props.kanban.boards[boardId].name}
+[build-main]     756 |                         </KanbanName>
+[build-main]   > 757 |                         <Board
+[build-main]         |                          ^^^^^
+[build-main]     758 |                             boardId={boardId}
+[build-main]     759 |                             doesOnlyShowFocusedList={true}
+[build-main]     760 |                             showHeader={false}
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Timer/Timer.tsx:789:22
+[build-main] TS2786: 'HelpIcon' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     787 |                         }}
+[build-main]     788 |                     />
+[build-main]   > 789 |                     <HelpIcon
+[build-main]         |                      ^^^^^^^^
+[build-main]     790 |                         storyName={'allStories'}
+[build-main]     791 |                         style={{
+[build-main]     792 |                             position: 'absolute',
+[build-main] 
+[build-main] ERROR in ./src/renderer/components/Timer/Timer.tsx:831:30
+[build-main] TS2786: 'FocusSelector' cannot be used as a JSX component.
+[build-main]   Its return type 'ReactNode' is not a valid JSX element.
+[build-main]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-main]     829 |
+[build-main]     830 |                         <div style={{ margin: '2em auto', textAlign: 'center' }}>
+[build-main]   > 831 |                             <FocusSelector width={240} />
+[build-main]         |                              ^^^^^^^^^^^^^
+[build-main]     832 |                         </div>
+[build-main]     833 |                         <ButtonRow>
+[build-main]     834 |                             <div id="start-timer-button" style={{ lineHeight: 0 }}>
+[build-main] 
+[build-main] webpack 5.104.1 compiled with 32 errors in 44780 ms
+[build-main] npm run build-main exited with code 1
+[build-renderer] Error parsing bundle asset "/mnt/files/Documents/GitHub/PomodoroLogger/dist/app.js": no such file
+[build-renderer] Error parsing bundle asset "/mnt/files/Documents/GitHub/PomodoroLogger/dist/4ad4e64be1d392a475f7.worker.js": no such file
+[build-renderer] Error parsing bundle asset "/mnt/files/Documents/GitHub/PomodoroLogger/dist/9f98af34e8ecc9cc2636.worker.js": no such file
+[build-renderer] Error parsing bundle asset "/mnt/files/Documents/GitHub/PomodoroLogger/dist/de0051cbe36f04faa993.worker.js": no such file
+[build-renderer] 
+[build-renderer] No bundles were parsed. Analyzer will show only original module sizes from stats file.
+[build-renderer] 
+[build-renderer] Webpack Bundle Analyzer saved report to /mnt/files/Documents/GitHub/PomodoroLogger/webpack-visualization/renderer.html
+[build-renderer] assets by status 4.22 MiB [cached] 7 assets
+[build-renderer] orphan modules 4.55 MiB [orphan] 1019 modules
+[build-renderer] runtime modules 4.33 KiB 12 modules
+[build-renderer] modules by path ./node_modules/ 6.73 MiB 1200 modules
+[build-renderer] modules by path ./src/ 2.03 MiB
+[build-renderer]   cacheable modules 2.03 MiB 17 modules
+[build-renderer]   ./node_modules/worker-loader/dist/cjs.js!./src/renderer/workers/trainKnn.worker.ts 113 bytes [not cacheable] [built] [code generated]
+[build-renderer]   ./node_modules/worker-loader/dist/cjs.js!./src/renderer/workers/tokenizer.worker.ts 113 bytes [not cacheable] [built] [code generated]
+[build-renderer]   ./node_modules/worker-loader/dist/cjs.js!./src/renderer/workers/db.worker.ts 113 bytes [not cacheable] [built] [code generated]
+[build-renderer] external "electron" 42 bytes [built] [code generated]
+[build-renderer] data:image/png;base64,iVBORw0KGgoAAAAN.. 727 bytes [built] [code generated]
+[build-renderer] external "fs" 42 bytes [built] [code generated]
+[build-renderer] external "path" 42 bytes [built] [code generated]
+[build-renderer] external "events" 42 bytes [built] [code generated]
+[build-renderer] external "util" 42 bytes [built] [code generated]
+[build-renderer] external "os" 42 bytes [built] [code generated]
+[build-renderer] 
+[build-renderer] WARNING in ./node_modules/mutationobserver-shim/dist/mutationobserver.min.js
+[build-renderer] Module Warning (from ./node_modules/source-map-loader/index.js):
+[build-renderer] (Emitted value instead of an instance of Error) Cannot find source file 'MutationObserver.js': Error: Can't resolve './MutationObserver.js' in '/mnt/files/Documents/GitHub/PomodoroLogger/node_modules/mutationobserver-shim/dist'
+[build-renderer]  @ ./node_modules/rc-menu/es/DOMWrap.js 48:2-34
+[build-renderer]  @ ./node_modules/rc-menu/es/SubPopupMenu.js 34:0-32 378:33-40
+[build-renderer]  @ ./node_modules/rc-menu/es/Menu.js 27:0-60 191:19-31 240:29-41
+[build-renderer]  @ ./node_modules/rc-menu/es/index.js 1:0-26 7:15-19
+[build-renderer]  @ ./node_modules/antd/es/menu/index.js 28:0-53 139:46-52 345:15-22 348:17-26
+[build-renderer]  @ ./node_modules/antd/es/index.js 35:0-41 35:0-41
+[build-renderer]  @ ./src/renderer/components/Application.tsx 13:0-34 45:14-26 124:42-46 128:93-97 134:93-97 143:93-97 154:93-97
+[build-renderer]  @ ./src/renderer/app.tsx 5:0-51 63:7-18
+[build-renderer] 
+[build-renderer] 1 warning has detailed information that is not shown.
+[build-renderer] Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+[build-renderer] 
+[build-renderer] ERROR in ./src/components/common/Mini/MiniLogger.tsx:247:17
+[build-renderer] TS2769: No overload matches this call.
+[build-renderer]   Overload 1 of 2, '(props: { slot?: string | undefined; style?: CSSProperties | undefined; title?: string | undefined; ref?: Ref<HTMLDivElement> | undefined; children?: ReactNode; ... 274 more ...; onTransitionStartCapture?: TransitionEventHandler<...> | undefined; } & { ...; } & { ...; }): ReactElement<...>', gave the following error.
+[build-renderer]     Type 'React.ReactNode' is not assignable to type 'import("/mnt/files/Documents/GitHub/PomodoroLogger/node_modules/@types/styled-components/node_modules/@types/react/index").ReactNode'.
+[build-renderer]       Type '{}' is not assignable to type 'ReactNode'.
+[build-renderer]   Overload 2 of 2, '(props: StyledComponentPropsWithAs<"div", DefaultTheme, {}, never, "div", "div">): ReactElement<StyledComponentPropsWithAs<"div", DefaultTheme, {}, never, "div", "div">, string | JSXElementConstructor<...>>', gave the following error.
+[build-renderer]     Type 'React.ReactNode' is not assignable to type 'import("/mnt/files/Documents/GitHub/PomodoroLogger/node_modules/@types/styled-components/node_modules/@types/react/index").ReactNode'.
+[build-renderer]       Type '{}' is not assignable to type 'ReactNode'.
+[build-renderer]     245 |                     </text>
+[build-renderer]     246 |                 </svg>
+[build-renderer]   > 247 |                 {this.getButtonRow()}
+[build-renderer]         |                 ^^^^^^^^^^^^^^^^^^^^^
+[build-renderer]     248 |                 <div className="task" style={{ margin: 4 }} title={this.props.task}>
+[build-renderer]     249 |                     {this.props.task}
+[build-renderer]     250 |                 </div>
+[build-renderer] 
+[build-renderer] ERROR in ./src/components/Visualization/AdaptWidthContainer/AdaptWidthContainer.tsx:35:13
+[build-renderer] TS2769: No overload matches this call.
+[build-renderer]   Overload 1 of 2, '(props: { slot?: string | undefined; style?: CSSProperties | undefined; title?: string | undefined; ref?: Ref<HTMLDivElement> | undefined; strictInside?: boolean | undefined; ... 275 more ...; onTransitionStartCapture?: TransitionEventHandler<...> | undefined; } & { ...; } & { ...; }): ReactElement<...>', gave the following error.
+[build-renderer]     Type 'React.ReactNode' is not assignable to type 'import("/mnt/files/Documents/GitHub/PomodoroLogger/node_modules/@types/styled-components/node_modules/@types/react/index").ReactNode'.
+[build-renderer]       Type '{}' is not assignable to type 'ReactNode'.
+[build-renderer]   Overload 2 of 2, '(props: StyledComponentPropsWithAs<"div", DefaultTheme, StyleProps, never, "div", "div">): ReactElement<StyledComponentPropsWithAs<"div", DefaultTheme, StyleProps, never, "div", "div">, string | JSXElementConstructor<...>>', gave the following error.
+[build-renderer]     Type 'React.ReactNode' is not assignable to type 'import("/mnt/files/Documents/GitHub/PomodoroLogger/node_modules/@types/styled-components/node_modules/@types/react/index").ReactNode'.
+[build-renderer]       Type '{}' is not assignable to type 'ReactNode'.
+[build-renderer]     33 |     return (
+[build-renderer]     34 |         <Container ref={selfRef} {...style}>
+[build-renderer]   > 35 |             {children && children(w)}
+[build-renderer]        |             ^^^^^^^^^^^^^^^^^^^^^^^^^
+[build-renderer]     36 |         </Container>
+[build-renderer]     37 |     );
+[build-renderer]     38 | };
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/app.tsx:48:14
+[build-renderer] TS2786: 'Provider' cannot be used as a JSX component.
+[build-renderer]   Its instance type 'Provider<AnyAction>' is not a valid JSX element.
+[build-renderer]     Property 'refs' is missing in type 'Provider<AnyAction>' but required in type 'ElementClass'.
+[build-renderer]     46 |     ReactDOM.render(
+[build-renderer]     47 |         <AppContainer>
+[build-renderer]   > 48 |             <Provider store={store}>
+[build-renderer]        |              ^^^^^^^^
+[build-renderer]     49 |                 <Component />
+[build-renderer]     50 |             </Provider>
+[build-renderer]     51 |         </AppContainer>,
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Analyser/Analyser.tsx:25:14
+[build-renderer] TS2786: 'SearchBar' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     23 |     return (
+[build-renderer]     24 |         <Container>
+[build-renderer]   > 25 |             <SearchBar />
+[build-renderer]        |              ^^^^^^^^^
+[build-renderer]     26 |         </Container>
+[build-renderer]     27 |     );
+[build-renderer]     28 | });
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Application.tsx:62:23
+[build-renderer] TS2786: 'Timer' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     60 |
+[build-renderer]     61 | class Application extends React.Component<Props> {
+[build-renderer]   > 62 |     private timer = (<Timer />);
+[build-renderer]        |                       ^^^^^
+[build-renderer]     63 |     componentDidMount(): void {
+[build-renderer]     64 |         loadDBs().then(() => {
+[build-renderer]     65 |             this.props.fetchSettings();
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Application.tsx:117:14
+[build-renderer] TS2786: 'ThemeProvider' cannot be used as a JSX component.
+[build-renderer]   Its instance type 'Component<ThemeProviderProps<DefaultTheme, DefaultTheme>, any, any>' is not a valid JSX element.
+[build-renderer]     Property 'refs' is missing in type 'Component<ThemeProviderProps<DefaultTheme, DefaultTheme>, any, any>' but required in type 'ElementClass'.
+[build-renderer]     115 |         const { currentTab, changeAppTab, minimize, theme } = this.props;
+[build-renderer]     116 |         return (
+[build-renderer]   > 117 |             <ThemeProvider theme={themes[theme] || themes.light}>
+[build-renderer]         |              ^^^^^^^^^^^^^
+[build-renderer]     118 |                 <>
+[build-renderer]     119 |                     <GlobalStyle />
+[build-renderer]     120 |                     <Main minimize={minimize}>
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Application.tsx:119:22
+[build-renderer] TS2786: 'GlobalStyle' cannot be used as a JSX component.
+[build-renderer]   Its instance type 'Component<ThemedGlobalStyledClassProps<any, DefaultTheme>, any, any>' is not a valid JSX element.
+[build-renderer]     Property 'refs' is missing in type 'Component<ThemedGlobalStyledClassProps<any, DefaultTheme>, any, any>' but required in type 'ElementClass'.
+[build-renderer]     117 |             <ThemeProvider theme={themes[theme] || themes.light}>
+[build-renderer]     118 |                 <>
+[build-renderer]   > 119 |                     <GlobalStyle />
+[build-renderer]         |                      ^^^^^^^^^^^
+[build-renderer]     120 |                     <Main minimize={minimize}>
+[build-renderer]     121 |                         <Tabs
+[build-renderer]     122 |                             activeKey={minimize ? 'timer' : currentTab}
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Application.tsx:152:38
+[build-renderer] TS2786: 'Kanban' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     150 |                                     timeout={600000}
+[build-renderer]     151 |                                 >
+[build-renderer]   > 152 |                                     <Kanban />
+[build-renderer]         |                                      ^^^^^^
+[build-renderer]     153 |                                 </DestroyOnTimeoutWrapper>
+[build-renderer]     154 |                             </TabPane>
+[build-renderer]     155 |
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Application.tsx:170:38
+[build-renderer] TS2786: 'History' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     168 |                                     timeout={600000}
+[build-renderer]     169 |                                 >
+[build-renderer]   > 170 |                                     <History key={`history-${theme}`} />
+[build-renderer]         |                                      ^^^^^^^
+[build-renderer]     171 |                                 </DestroyOnTimeoutWrapper>
+[build-renderer]     172 |                             </TabPane>
+[build-renderer]     173 |
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Application.tsx:183:34
+[build-renderer] TS2786: 'Setting' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     181 |                                 key="setting"
+[build-renderer]     182 |                             >
+[build-renderer]   > 183 |                                 <Setting />
+[build-renderer]         |                                  ^^^^^^^
+[build-renderer]     184 |                             </TabPane>
+[build-renderer]     185 |                         </Tabs>
+[build-renderer]     186 |                         {!minimize && (
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Application.tsx:188:34
+[build-renderer] TS2786: 'UserGuide' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     186 |                         {!minimize && (
+[build-renderer]     187 |                             <>
+[build-renderer]   > 188 |                                 <UserGuide />
+[build-renderer]         |                                  ^^^^^^^^^
+[build-renderer]     189 |                                 <UpdateController />
+[build-renderer]     190 |                                 <CardInDetail />
+[build-renderer]     191 |                                 <ConnectedPomodoroSankey />
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Application.tsx:190:34
+[build-renderer] TS2322: Type '{}' is not assignable to type 'never'.
+[build-renderer]     188 |                                 <UserGuide />
+[build-renderer]     189 |                                 <UpdateController />
+[build-renderer]   > 190 |                                 <CardInDetail />
+[build-renderer]         |                                  ^^^^^^^^^^^^
+[build-renderer]     191 |                                 <ConnectedPomodoroSankey />
+[build-renderer]     192 |                             </>
+[build-renderer]     193 |                         )}
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Application.tsx:190:34
+[build-renderer] TS2786: 'CardInDetail' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     188 |                                 <UserGuide />
+[build-renderer]     189 |                                 <UpdateController />
+[build-renderer]   > 190 |                                 <CardInDetail />
+[build-renderer]         |                                  ^^^^^^^^^^^^
+[build-renderer]     191 |                                 <ConnectedPomodoroSankey />
+[build-renderer]     192 |                             </>
+[build-renderer]     193 |                         )}
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Application.tsx:191:34
+[build-renderer] TS2786: 'ConnectedPomodoroSankey' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     189 |                                 <UpdateController />
+[build-renderer]     190 |                                 <CardInDetail />
+[build-renderer]   > 191 |                                 <ConnectedPomodoroSankey />
+[build-renderer]         |                                  ^^^^^^^^^^^^^^^^^^^^^^^
+[build-renderer]     192 |                             </>
+[build-renderer]     193 |                         )}
+[build-renderer]     194 |                         <ReactHotkeys
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Kanban/Board/Board.tsx:82:22
+[build-renderer] TS2786: 'List' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     80 |             lists = (provided: any) => (
+[build-renderer]     81 |                 <ListContainer ref={provided.innerRef} {...provided.droppableProps}>
+[build-renderer]   > 82 |                     <List
+[build-renderer]        |                      ^^^^
+[build-renderer]     83 |                         listId={props.focusedList}
+[build-renderer]     84 |                         index={0}
+[build-renderer]     85 |                         key={0}
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Kanban/Board/Board.tsx:96:26
+[build-renderer] TS2786: 'List' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     94 |                 <ListContainer ref={provided.innerRef}>
+[build-renderer]     95 |                     {props.lists.map((listId, index) => (
+[build-renderer]   > 96 |                         <List
+[build-renderer]        |                          ^^^^
+[build-renderer]     97 |                             listId={listId}
+[build-renderer]     98 |                             index={index}
+[build-renderer]     99 |                             key={listId}
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Kanban/Board/Board.tsx:115:18
+[build-renderer] TS2786: 'DragDropContext' cannot be used as a JSX component.
+[build-renderer]   Its instance type 'DragDropContext' is not a valid JSX element.
+[build-renderer]     Property 'refs' is missing in type 'Component<DragDropContextProps, {}, any>' but required in type 'ElementClass'.
+[build-renderer]     113 |         return (
+[build-renderer]     114 |             <Container>
+[build-renderer]   > 115 |                 <DragDropContext onDragEnd={handleDragEnd}>
+[build-renderer]         |                  ^^^^^^^^^^^^^^^
+[build-renderer]     116 |                     <Droppable droppableId={props._id} type="COLUMN" direction="horizontal">
+[build-renderer]     117 |                         {lists}
+[build-renderer]     118 |                     </Droppable>
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Kanban/Board/Board.tsx:116:22
+[build-renderer] TS2786: 'Droppable' cannot be used as a JSX component.
+[build-renderer]   Its instance type 'Droppable' is not a valid JSX element.
+[build-renderer]     Property 'refs' is missing in type 'Component<DroppableProps, {}, any>' but required in type 'ElementClass'.
+[build-renderer]     114 |             <Container>
+[build-renderer]     115 |                 <DragDropContext onDragEnd={handleDragEnd}>
+[build-renderer]   > 116 |                     <Droppable droppableId={props._id} type="COLUMN" direction="horizontal">
+[build-renderer]         |                      ^^^^^^^^^
+[build-renderer]     117 |                         {lists}
+[build-renderer]     118 |                     </Droppable>
+[build-renderer]     119 |                 </DragDropContext>
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Kanban/Board/BoardBrief.tsx:250:18
+[build-renderer] TS2786: 'ListsCountBar' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     248 |                     />
+[build-renderer]     249 |                 ) : undefined}
+[build-renderer]   > 250 |                 <ListsCountBar boardId={props._id} height={40} />
+[build-renderer]         |                  ^^^^^^^^^^^^^
+[build-renderer]     251 |                 {props.relatedSessions.length ? (
+[build-renderer]     252 |                     <AnimTrend style={{ display: hover ? undefined : 'none' }}>
+[build-renderer]     253 |                         <IdTrend boardId={props._id} />
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Kanban/Board/Overview.tsx:313:22
+[build-renderer] TS2786: 'BoardBrief' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     311 |                     : undefined;
+[build-renderer]     312 |                 return (
+[build-renderer]   > 313 |                     <BoardBrief
+[build-renderer]         |                      ^^^^^^^^^^
+[build-renderer]     314 |                         key={_id}
+[build-renderer]     315 |                         boardId={_id}
+[build-renderer]     316 |                         onClick={onClick}
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Kanban/Board/Overview.tsx:326:18
+[build-renderer] TS2786: 'OverviewTable' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     324 |
+[build-renderer]     325 | export const Overview: FC<InputProps> = ({ showTable = false, showConfigById }: InputProps) =>
+[build-renderer]   > 326 |     showTable ? <OverviewTable /> : <OverviewCards showConfigById={showConfigById} />;
+[build-renderer]         |                  ^^^^^^^^^^^^^
+[build-renderer]     327 |
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Kanban/Board/Overview.tsx:326:38
+[build-renderer] TS2786: 'OverviewCards' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     324 |
+[build-renderer]     325 | export const Overview: FC<InputProps> = ({ showTable = false, showConfigById }: InputProps) =>
+[build-renderer]   > 326 |     showTable ? <OverviewTable /> : <OverviewCards showConfigById={showConfigById} />;
+[build-renderer]         |                                      ^^^^^^^^^^^^^
+[build-renderer]     327 |
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Kanban/Card/Card.tsx:153:14
+[build-renderer] TS2786: 'Draggable' cannot be used as a JSX component.
+[build-renderer]   Its instance type 'Draggable' is not a valid JSX element.
+[build-renderer]     Property 'refs' is missing in type 'Component<DraggableProps, {}, any>' but required in type 'ElementClass'.
+[build-renderer]     151 |     return (
+[build-renderer]     152 |         <>
+[build-renderer]   > 153 |             <Draggable draggableId={_id} index={index}>
+[build-renderer]         |              ^^^^^^^^^
+[build-renderer]     154 |                 {(provided, snapshot) => {
+[build-renderer]     155 |                     return (
+[build-renderer]     156 |                         <>
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Kanban/Card/CardEditor.tsx:256:3
+[build-renderer] TS2345: Argument of type 'ConnectedComponentClass<FC<Props>, Omit<FormComponentProps<any>, "form">>' is not assignable to parameter of type 'JSXElementConstructor<never>'.
+[build-renderer]   Type 'ConnectedComponentClass<FC<Props>, Omit<FormComponentProps<any>, "form">>' is not assignable to type 'new (props: never, context: any) => Component<any, any, any>'.
+[build-renderer]     Construct signature return types 'Component<Omit<FormComponentProps<any>, "form">, any, any>' and 'Component<any, any, any>' are incompatible.
+[build-renderer]       The types returned by 'render()' are incompatible between these types.
+[build-renderer]         Type 'React.ReactNode' is not assignable to type 'import("/mnt/files/Documents/GitHub/PomodoroLogger/node_modules/@types/styled-components/node_modules/@types/react/index").ReactNode'.
+[build-renderer]           Type '{}' is not assignable to type 'ReactNode'.
+[build-renderer]     254 |             dispatch(kanbanActions.setEditCard(false, '', undefined)),
+[build-renderer]     255 |     })
+[build-renderer]   > 256 | )(Form.create({})(_CardInDetail));
+[build-renderer]         |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[build-renderer]     257 |
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Kanban/Kanban.tsx:330:26
+[build-renderer] TS2786: 'Board' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     328 |                         <Overview showConfigById={showConfigById} showTable={showTable} />
+[build-renderer]     329 |                     ) : (
+[build-renderer]   > 330 |                         <Board
+[build-renderer]         |                          ^^^^^
+[build-renderer]     331 |                             boardId={props.kanban.chosenBoardId}
+[build-renderer]     332 |                             key={props.kanban.chosenBoardId}
+[build-renderer]     333 |                         />
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Kanban/List/List.tsx:296:10
+[build-renderer] TS2786: 'Draggable' cannot be used as a JSX component.
+[build-renderer]   Its instance type 'Draggable' is not a valid JSX element.
+[build-renderer]     Property 'refs' is missing in type 'Component<DraggableProps, {}, any>' but required in type 'ElementClass'.
+[build-renderer]     294 |
+[build-renderer]     295 |     return (
+[build-renderer]   > 296 |         <Draggable draggableId={props.listId} index={props.index}>
+[build-renderer]         |          ^^^^^^^^^
+[build-renderer]     297 |             {(provided, { draggingOver }) => (
+[build-renderer]     298 |                 <div>
+[build-renderer]     299 |                     <Container
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Kanban/List/List.tsx:357:26
+[build-renderer] TS2786: 'Droppable' cannot be used as a JSX component.
+[build-renderer]   Its instance type 'Droppable' is not a valid JSX element.
+[build-renderer]     Property 'refs' is missing in type 'Component<DroppableProps, {}, any>' but required in type 'ElementClass'.
+[build-renderer]     355 |                             )}
+[build-renderer]     356 |                         </ListHead>
+[build-renderer]   > 357 |                         <Droppable droppableId={props._id}>
+[build-renderer]         |                          ^^^^^^^^^
+[build-renderer]     358 |                             {(provided, { isDraggingOver }) => {
+[build-renderer]     359 |                                 const mergedRef = mergeRefs([
+[build-renderer]     360 |                                     provided.innerRef,
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Kanban/List/List.tsx:371:46
+[build-renderer] TS2786: 'Card' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     369 |                                         <BeforePlaceHolder />
+[build-renderer]     370 |                                         {filteredCards.map((cardId, index) => (
+[build-renderer]   > 371 |                                             <Card
+[build-renderer]         |                                              ^^^^
+[build-renderer]     372 |                                                 boardId={props.boardId}
+[build-renderer]     373 |                                                 cardId={cardId}
+[build-renderer]     374 |                                                 index={index}
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Timer/Timer.tsx:740:18
+[build-renderer] TS2786: 'TimerMask' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     738 |             <Layout style={{ backgroundColor: 'var(--pl-bg)' }} ref={this.selfRef}>
+[build-renderer]     739 |                 <ReactHotkeys keyName={'f5,f6,tab'} onKeyDown={this.onKeyDown} />
+[build-renderer]   > 740 |                 <TimerMask
+[build-renderer]         |                  ^^^^^^^^^
+[build-renderer]     741 |                     extendCurrentSession={this.extendCurrentSession}
+[build-renderer]     742 |                     newPomodoro={this.stagedSession}
+[build-renderer]     743 |                     showMask={showMask}
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Timer/Timer.tsx:757:26
+[build-renderer] TS2786: 'Board' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     755 |                             {this.props.kanban.boards[boardId].name}
+[build-renderer]     756 |                         </KanbanName>
+[build-renderer]   > 757 |                         <Board
+[build-renderer]         |                          ^^^^^
+[build-renderer]     758 |                             boardId={boardId}
+[build-renderer]     759 |                             doesOnlyShowFocusedList={true}
+[build-renderer]     760 |                             showHeader={false}
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Timer/Timer.tsx:789:22
+[build-renderer] TS2786: 'HelpIcon' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     787 |                         }}
+[build-renderer]     788 |                     />
+[build-renderer]   > 789 |                     <HelpIcon
+[build-renderer]         |                      ^^^^^^^^
+[build-renderer]     790 |                         storyName={'allStories'}
+[build-renderer]     791 |                         style={{
+[build-renderer]     792 |                             position: 'absolute',
+[build-renderer] 
+[build-renderer] ERROR in ./src/renderer/components/Timer/Timer.tsx:831:30
+[build-renderer] TS2786: 'FocusSelector' cannot be used as a JSX component.
+[build-renderer]   Its return type 'ReactNode' is not a valid JSX element.
+[build-renderer]     Type 'undefined' is not assignable to type 'Element | null'.
+[build-renderer]     829 |
+[build-renderer]     830 |                         <div style={{ margin: '2em auto', textAlign: 'center' }}>
+[build-renderer]   > 831 |                             <FocusSelector width={240} />
+[build-renderer]         |                              ^^^^^^^^^^^^^
+[build-renderer]     832 |                         </div>
+[build-renderer]     833 |                         <ButtonRow>
+[build-renderer]     834 |                             <div id="start-timer-button" style={{ lineHeight: 0 }}>
+[build-renderer] 
+[build-renderer] webpack 5.104.1 compiled with 32 errors and 1 warning in 99123 ms
+[build-renderer] npm run build-renderer exited with code 1
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
