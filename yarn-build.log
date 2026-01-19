@@ -1,28 +1,28 @@
 yarn run v1.22.22
 $ rm -rf ./dist
 $ concurrently "npm:build-main" "npm:build-renderer"
-[build-renderer] npm warn Unknown env config "argv". This will stop working in the next major version of npm.
-[build-renderer] npm warn Unknown env config "version-git-tag". This will stop working in the next major version of npm.
-[build-renderer] npm warn Unknown env config "version-commit-hooks". This will stop working in the next major version of npm.
-[build-renderer] npm warn Unknown env config "version-tag-prefix". This will stop working in the next major version of npm.
-[build-renderer] npm warn Unknown env config "version-git-message". This will stop working in the next major version of npm.
 [build-main] npm warn Unknown env config "argv". This will stop working in the next major version of npm.
 [build-main] npm warn Unknown env config "version-git-tag". This will stop working in the next major version of npm.
 [build-main] npm warn Unknown env config "version-commit-hooks". This will stop working in the next major version of npm.
 [build-main] npm warn Unknown env config "version-tag-prefix". This will stop working in the next major version of npm.
 [build-main] npm warn Unknown env config "version-git-message". This will stop working in the next major version of npm.
-[build-renderer] 
-[build-renderer] > pomodoro-logger@0.6.3 build-renderer
-[build-renderer] > cross-env NODE_ENV=production webpack --config webpack.renderer.prod.config.js
-[build-renderer] 
+[build-renderer] npm warn Unknown env config "argv". This will stop working in the next major version of npm.
+[build-renderer] npm warn Unknown env config "version-git-tag". This will stop working in the next major version of npm.
+[build-renderer] npm warn Unknown env config "version-commit-hooks". This will stop working in the next major version of npm.
+[build-renderer] npm warn Unknown env config "version-tag-prefix". This will stop working in the next major version of npm.
+[build-renderer] npm warn Unknown env config "version-git-message". This will stop working in the next major version of npm.
 [build-main] 
 [build-main] > pomodoro-logger@0.6.3 build-main
 [build-main] > cross-env NODE_ENV=production webpack --config webpack.main.prod.config.js
 [build-main] 
-[build-renderer] (node:262222) [DEP_WEBPACK_COMPILATION_CACHE] DeprecationWarning: Compilation.cache was removed in favor of Compilation.getCache()
+[build-renderer] 
+[build-renderer] > pomodoro-logger@0.6.3 build-renderer
+[build-renderer] > cross-env NODE_ENV=production webpack --config webpack.renderer.prod.config.js
+[build-renderer] 
+[build-renderer] (node:44922) [DEP_WEBPACK_COMPILATION_CACHE] DeprecationWarning: Compilation.cache was removed in favor of Compilation.getCache()
 [build-renderer] (Use `node --trace-deprecation ...` to show where the warning was created)
-[build-renderer] (node:262222) [DEP_WEBPACK_TEMPLATE_PATH_PLUGIN_REPLACE_PATH_VARIABLES_HASH] DeprecationWarning: [hash] is now [fullhash] (also consider using [chunkhash] or [contenthash], see documentation for details)
-[build-renderer] (node:262222) [DEP_WEBPACK_DEPRECATION_ARRAY_TO_SET_INDEXER] DeprecationWarning: chunk.files was changed from Array to Set (indexing Array is deprecated)
+[build-renderer] (node:44922) [DEP_WEBPACK_TEMPLATE_PATH_PLUGIN_REPLACE_PATH_VARIABLES_HASH] DeprecationWarning: [hash] is now [fullhash] (also consider using [chunkhash] or [contenthash], see documentation for details)
+[build-renderer] (node:44922) [DEP_WEBPACK_DEPRECATION_ARRAY_TO_SET_INDEXER] DeprecationWarning: chunk.files was changed from Array to Set (indexing Array is deprecated)
 [build-main] Error parsing bundle asset "/mnt/files/Documents/GitHub/PomodoroLogger/dist/main.js": no such file
 [build-main] Error parsing bundle asset "/mnt/files/Documents/GitHub/PomodoroLogger/dist/worker.js": no such file
 [build-main] Error parsing bundle asset "/mnt/files/Documents/GitHub/PomodoroLogger/dist/preload.js": no such file
@@ -428,7 +428,7 @@ $ concurrently "npm:build-main" "npm:build-renderer"
 [build-main]     833 |                         <ButtonRow>
 [build-main]     834 |                             <div id="start-timer-button" style={{ lineHeight: 0 }}>
 [build-main] 
-[build-main] webpack 5.104.1 compiled with 32 errors in 44780 ms
+[build-main] webpack 5.104.1 compiled with 32 errors in 26203 ms
 [build-main] npm run build-main exited with code 1
 [build-renderer] Error parsing bundle asset "/mnt/files/Documents/GitHub/PomodoroLogger/dist/app.js": no such file
 [build-renderer] Error parsing bundle asset "/mnt/files/Documents/GitHub/PomodoroLogger/dist/4ad4e64be1d392a475f7.worker.js": no such file
@@ -439,11 +439,11 @@ $ concurrently "npm:build-main" "npm:build-renderer"
 [build-renderer] 
 [build-renderer] Webpack Bundle Analyzer saved report to /mnt/files/Documents/GitHub/PomodoroLogger/webpack-visualization/renderer.html
 [build-renderer] assets by status 4.22 MiB [cached] 7 assets
-[build-renderer] orphan modules 4.55 MiB [orphan] 1019 modules
+[build-renderer] orphan modules 4.55 MiB [orphan] 1025 modules
 [build-renderer] runtime modules 4.33 KiB 12 modules
-[build-renderer] modules by path ./node_modules/ 6.73 MiB 1200 modules
-[build-renderer] modules by path ./src/ 2.03 MiB
-[build-renderer]   cacheable modules 2.03 MiB 17 modules
+[build-renderer] modules by path ./node_modules/ 6.73 MiB 1199 modules
+[build-renderer] modules by path ./src/ 2.04 MiB
+[build-renderer]   cacheable modules 2.04 MiB 17 modules
 [build-renderer]   ./node_modules/worker-loader/dist/cjs.js!./src/renderer/workers/trainKnn.worker.ts 113 bytes [not cacheable] [built] [code generated]
 [build-renderer]   ./node_modules/worker-loader/dist/cjs.js!./src/renderer/workers/tokenizer.worker.ts 113 bytes [not cacheable] [built] [code generated]
 [build-renderer]   ./node_modules/worker-loader/dist/cjs.js!./src/renderer/workers/db.worker.ts 113 bytes [not cacheable] [built] [code generated]
@@ -857,6 +857,6 @@ $ concurrently "npm:build-main" "npm:build-renderer"
 [build-renderer]     833 |                         <ButtonRow>
 [build-renderer]     834 |                             <div id="start-timer-button" style={{ lineHeight: 0 }}>
 [build-renderer] 
-[build-renderer] webpack 5.104.1 compiled with 32 errors and 1 warning in 99123 ms
+[build-renderer] webpack 5.104.1 compiled with 32 errors and 1 warning in 51726 ms
 [build-renderer] npm run build-renderer exited with code 1
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

@@ -1,0 +1,10 @@
+yarn install v1.22.22
+[1/4] Resolving packages...
+success Already up-to-date.
+$ electron-builder install-app-deps
+  • electron-builder  version=24.13.3
+  • loaded configuration  file=package.json ("build" field)
+  • rebuilding native dependencies  dependencies=ref-napi@3.0.3, iconv@2.3.5 platform=linux arch=x64
+  • rebuilding native dependency  name=iconv version=2.3.5
+  • rebuilding native dependency  name=ref-napi version=3.0.3
+Done in 12.52s.
