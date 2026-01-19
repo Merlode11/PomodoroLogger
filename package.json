@@ -208,7 +208,8 @@
         "node-mac-permissions": "^2.2.0"
     },
     "resolutions": {
-        "node-ipc": "9.1.1"
+        "node-ipc": "9.1.1",
+        "@types/react": "^16.14.60"
     },
     "sideEffects": [
         "**/*.css",

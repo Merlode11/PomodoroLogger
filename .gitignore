@@ -11,4 +11,6 @@ junit.xml
 dev-app-update.yml
 webpack-visualization/
 yarn-error.log
+yarn-build-fixed.log
+yarn-install-fixed.log
 __scripts/
