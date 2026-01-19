@@ -9,7 +9,7 @@ module.exports = merge.smart(baseConfig, {
     mode: process.env.NODE_ENV,
     target: 'web',
     entry: {
-        app: ['@babel/polyfill'],
+        app: [],
     },
     module: {
         rules: [
@@ -27,9 +27,11 @@ module.exports = merge.smart(baseConfig, {
                                 '@babel/preset-typescript',
                             ],
                             plugins: [
-                                '@babel/plugin-proposal-optional-chaining',
+                                '@babel/plugin-transform-optional-chaining',
                                 '@babel/plugin-transform-runtime',
-                                ['@babel/plugin-proposal-class-properties', { loose: true }],
+                                ['@babel/plugin-transform-class-properties', { loose: true }],
+                                ['@babel/plugin-transform-private-methods', { loose: true }],
+                                ['@babel/plugin-transform-private-property-in-object', { loose: true }],
                             ],
                         },
                     },
